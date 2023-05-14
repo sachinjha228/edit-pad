@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/bootstrap";
+.f-s-16{
+    font-size: 16px;
+}
+.f-s-18{
+    font-size: 18px;
+}
+.f-s-20{
+    font-size: 20px;
+}
+.w-80{
+    width: 80%;
+}
+
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  .dark-mode {
+    background-color: black;
+    color: white !important;
+  }
+  .light-mode {
+    background-color: white;
+    color: black !important;
+  }

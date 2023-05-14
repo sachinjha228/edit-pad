@@ -1,0 +1,37 @@
+<div class="m-a-2 p-t-3">
+    <textarea
+    id="myText"
+    rows="15"
+    role="textbox"
+    placeholder="Enter your text here...."
+    [(ngModel)]= "myText"
+    (keyup)="countWord()"
+    ></textarea>
+</div>
+<div class="float-lg-right f-s-16 word-count">
+        <span>Total Word Count - {{totalWord}}</span>
+        <span>Total Character Count - {{myText.length}}</span>
+</div>
+<div class="text-lg-center p-t-3 m-a-2">
+    <button class="btn btn-primary m-a-1" (click)="changeToCapital()">Change to Capital</button>
+    <button class="btn btn-primary m-a-1" (click)="changeToSmall()">Change to Small</button>
+    <button class="btn btn-primary m-a-1" (click)="copyText()">Copy Text</button>
+    <button class="btn btn-success m-a-1" (click)="downloadText()">Download as Text</button>
+    <button class="btn btn-danger m-a-1" (click)="reset()">Reset</button>
+    <button class="btn btn-dark dark-mode m-a-1" *ngIf="!this.darkMode" (click)="changeMode()">Dark Mode</button>
+    <button class="btn btn-light m-a-1" *ngIf="this.darkMode" (click)="changeMode()">Light Mode</button>
+    <div class="form-check">
+        <input
+          mdbCheckbox
+          class="form-check-input check-box-20 m-t-10"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+          [(ngModel)]= "checkboxCapitalize"
+          (change)="checkBoxchecked()"
+        />
+        <label class="form-check-label f-s-20" for="flexCheckDefault">
+            Capitalize
+        </label>
+      </div>
+</div>
